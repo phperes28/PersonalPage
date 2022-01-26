@@ -801,13 +801,15 @@ section {
   background: #149ddd;
   color: #fff;
 }
-.contact .php-email-form {
+.contact .php-email {
   width: 100%;
-  padding: 30px;
+  padding: 10px;
+  margin-bottom:0px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
-.contact .php-email-form .form-group {
+.contact .php-email .form-group {
+  padding-top: 8px;
   padding-bottom: 8px;
 }
 .contact .php-email-form .validate {
@@ -857,7 +859,7 @@ section {
 .contact .php-email-form .form-group {
   margin-bottom: 15px;
 }
-.contact .php-email-form label {
+.contact .php-email label {
   padding-bottom: 8px;
 }
 .contact .php-email-form input, .contact .php-email-form textarea {
@@ -865,13 +867,13 @@ section {
   box-shadow: none;
   font-size: 14px;
 }
-.contact .php-email-form input {
+.contact .php-email input {
   height: 44px;
 }
-.contact .php-email-form textarea {
+.contact .php-email textarea {
   padding: 10px 15px;
 }
-.contact .php-email-form button[type=submit] {
+.contact .php-email button[type=submit] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -879,9 +881,24 @@ section {
   transition: 0.4s;
   border-radius: 4px;
 }
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email button[type=submit]:hover {
   background: #37b3ed;
 }
+
+.form-control-button{
+    margin-top: 40px;
+
+}
+
+.form-control{
+    margin-top: 10px;
+
+}
+
+form-group{
+
+}
+
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);

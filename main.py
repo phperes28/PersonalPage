@@ -21,13 +21,13 @@ Bootstrap(app)
 
 @app.route("/",  methods=["GET", "POST"])
 def home():
-    form = ContactForm()
+    form = ContactForm(request.form)
+
     if request.method == "POST" and form.validate_on_submit():
         name = request.form.get("name")
         email = request.form.get("email")
         subject = request.form.get("subject")
         message = request.form.get("message")
-
         print("post")
         if form.validate() == False:
             flash('Preencha todos os campos')
@@ -48,22 +48,28 @@ def home():
                                 )
                 print("message sent")
                 server.quit()
-                flash("Sua mensagem foi enviada!")
+                flash("Your message was sent! :)")
             except Exception as e :
-                flash('Erro ao enviar mensagem')
+                flash('Error sending the message :(')
                 print(e)
 
             finally:
-                return render_template("index.html", scrollToAnchor="contact", form=form)
+                return redirect("/#contact")
 
 
-    return render_template("index.html", scrollToAnchor="contact", form=form)
+    return render_template("index.html",  form=form)
 
 @app.route("/automation01")
 def automation():
     return render_template("portfolio-details.html")
 
+@app.route("/automation02")
+def automation02():
+    return render_template("portfolio-details2.html")
 
+@app.route("/automation03")
+def automation03():
+    return render_template("portfolio-details3.html")
 
 
 
